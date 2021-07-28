@@ -35,6 +35,31 @@ describe('Calculator', () => {
     expect(runningTotal.text()).toEqual('5');
   });
 
+  it('should subtract two numbers', () => {
+    // creating const's for required buttons needed for test.
+    const button7 = container.find('#number7')
+    const button4 = container.find('#number4')
+    const subtract = container.find('#operator-subtract');
+    const equals = container.find('#operator-equals')
+    // container find me the running total
+    const runningTotal = container.find('#running-total');
+    // simulate these button clicks
+    button7.simulate('click');
+    subtract.simulate('click');
+    button4.simulate('click');   
+    equals.simulate('click');
+    // i now "expect" after simulating clicking these buttons to return 3
+    expect(runningTotal.text()).toEqual('3');
+
+    
+    
+
+
+
+
+  })
+
+
 
 
 });
