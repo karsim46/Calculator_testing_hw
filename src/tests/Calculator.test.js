@@ -50,14 +50,35 @@ describe('Calculator', () => {
     equals.simulate('click');
     // i now "expect" after simulating clicking these buttons to return 3
     expect(runningTotal.text()).toEqual('3');
+  })
+  
+  it('should multiply two numbers', () => {
+  // creating const's for required buttons needed for test.
+    const button5 = container.find('#number5')
+    const button3 = container.find('#number3')
+    const multiply = container.find('#operator-multiply');
+    const equals = container.find('#operator-equals')
+     // container find me the running total
+    const runningTotal = container.find('#running-total');
+    // i now "expect" after simulating clicking these buttons to return 15
+    button5.simulate('click')
+    multiply.simulate('click')
+    button3.simulate('click')
+    equals.simulate('click')
 
-    
-    
-
-
-
+    expect(runningTotal.text()).toEqual('15');
 
   })
+
+  
+
+    
+    
+
+
+
+
+  
 
 
 
