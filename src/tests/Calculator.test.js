@@ -88,23 +88,31 @@ describe('Calculator', () => {
     // i now "expect" after simulating clicking these buttons to return 15
     expect(runningTotal.text()).toEqual('3');
 
-
-
-
-
   })
 
-  
+    it ('should concatenate multiple clicks', () => {
 
-    
-    
+      const button5 = container.find('#number5')
+      const button4 = container.find('#number4')
+      const button3 = container.find('#number3')
+      const button2 = container.find('#number2')
+      const button1 = container.find('#number1')
+
+      const runningTotal = container.find('#running-total');
+
+      button5.simulate('click')
+      button4.simulate('click')
+      button3.simulate('click')
+      button2.simulate('click')
+      button1.simulate('click')
+
+      expect(runningTotal.text()).toEqual('54321')
 
 
 
 
-  
 
-
+    })
 
 
 });
