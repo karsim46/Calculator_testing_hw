@@ -19,15 +19,25 @@ describe('Calculator', () => {
   });
 
   it('should add two numbers', () => {
-    const button1 = container.find('#number1');
-    button4
-
+    // creating const's for required buttons needed for test.
+    const button4 = container.find('#number4')
+    const button1 = container.find('#number1')
+    const add = container.find('#operator_add')
+    const equals = container.find('#operator-equals')
+    // container find me the running total
+    const runningTotal = container.find('#running-total');
+    // adding in click function
+    button4.simulate('click');
+    add.simulate('click');
+    button1.simulate('click');   
+    equals.simulate('click');
+    // i now "expect" after simulating clicking these buttons to return 5
     expect(runningTotal.text()).toEqual('5');
-  }
+  });
 
 
 
-})
+});
 
 
 
