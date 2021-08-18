@@ -41,11 +41,19 @@ describe("Calculator", () => {
 
     cy.get('#number7').click();
     cy.get('#number8').click();
+    cy.get('#number9').click();
+    cy.get('#number8').click();
+    cy.get('#number6').click();
+    cy.get('#number5').click();
+    cy.get('#number3').click();
     cy.get('#operator-multiply').click();
     cy.get('#number9').click();
     cy.get('#number6').click();
+    cy.get('#number2').click();
+    cy.get('#number5').click();
+    cy.get('#number9').click(); 
     cy.get('#operator-equals').click();
-    cy.get('.display').should('contain', 7488)
+    cy.get('.display').should('contain', 760316439127)
 
   })
 

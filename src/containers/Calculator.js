@@ -86,7 +86,7 @@ function App() {
     }else{
     setRunningTotal(parseFloat(previousTotal) / parseFloat(number));
     }
-    
+       
     
   }
   
